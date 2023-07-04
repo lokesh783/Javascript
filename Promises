@@ -1,0 +1,16 @@
+function promiseBody(resolve){
+  setTimeout(resolve, 1000)
+}
+
+function mG(){
+  var ans = new Promise(promiseBody)
+  return ans;
+}
+
+// Here m is a promise
+// it is given by subordinate
+// i can use this to know if the 
+// the task given is completed 
+// or not
+var m = mG();
+m.then(console.log("Take medicine"))
